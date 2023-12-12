@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+message EmployeeRequest {
+    repeated int32 employeIdList = 1;
+}
+
+message EmployeeResponse {
+    string message = 1;
+}
+
+service Employee {
+    rpc paySalary(EmployeeRequest) returns (EmployeeResponse) {}
+}
